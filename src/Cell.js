@@ -8,6 +8,13 @@ export default class Cell extends Component {
       color: this.props.color
     }
   }
+
+  clickHandler = () => {
+    const newColor = this.props.newSelectedColor()
+    this.setState({
+      color: newColor
+    })
+  }
   
   render() {
     return (
